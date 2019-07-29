@@ -6,12 +6,14 @@ using TMPro;
 public class scale : MonoBehaviour
 {
 
-    public List<GameObject> attachedBodies;
+    public static List<GameObject> attachedBodies;
 
     public TextMeshPro massText;
     // Start is called before the first frame update
     void Start()
     {
+        attachedBodies = new List<GameObject>();
+
     }
 
 
@@ -29,10 +31,16 @@ public class scale : MonoBehaviour
         return mass;
     }
 
+
+
+
+
+
     void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "CanScale")
         {
+
             attachedBodies.Add(collision.gameObject);
             collision.gameObject.AddComponent<FixedJoint>();
             collision.gameObject.GetComponent<FixedJoint>().connectedBody = this.gameObject.GetComponent<Rigidbody>(); ;
