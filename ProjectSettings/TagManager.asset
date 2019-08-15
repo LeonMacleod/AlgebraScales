@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - CanScale
+  - Scale
+  - scale1
+  - scale2
+  - added
+  - notadded
   layers:
   - Default
   - TransparentFX
