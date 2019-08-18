@@ -56,7 +56,7 @@ public class ObjectManager : MonoBehaviour
             this.gameObject.transform.Find("state").tag = "notadded";
         }
 
-        if (collision.gameObject.transform.Find("id").tag == "scale1")
+        if (collision.gameObject.transform.Find("id").tag == "scale2")
         {
             //scale 2 logic
             scale2.GetComponent<scale>().attachedBodies.Remove(this.gameObject);
